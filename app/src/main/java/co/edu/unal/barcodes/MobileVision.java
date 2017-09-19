@@ -30,7 +30,7 @@ public class MobileVision extends AppCompatActivity {
         setContentView(R.layout.activity_mobile_vision);
 
         cameraView = (SurfaceView) findViewById(R.id.camera_view);
-        barcodeInfo = (TextView) findViewById(R.id.code_info);
+        barcodeInfo = (TextView) findViewById(R.id.mobile_vision_result);
 
         barcodeDetector =
                 new BarcodeDetector.Builder(this)
@@ -51,7 +51,9 @@ public class MobileVision extends AppCompatActivity {
             @Override
             public void surfaceCreated(SurfaceHolder holder) {
                 try {
-                    if (ActivityCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.checkSelfPermission(
+                            getApplicationContext(),
+                            android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                         // TODO: Consider calling
                         //    ActivityCompat#requestPermissions
                         // here to request the missing permissions, and then overriding
@@ -87,9 +89,7 @@ public class MobileVision extends AppCompatActivity {
                 if (barcodes.size() != 0) {
                     barcodeInfo.post(new Runnable() {    // Use the post method of the TextView
                         public void run() {
-                            barcodeInfo.setText(    // Update the TextView
-                                    barcodes.valueAt(0).displayValue
-                            );
+                            barcodeInfo.setText(barcodes.valueAt(0).displayValue);
                         }
                     });
                 }

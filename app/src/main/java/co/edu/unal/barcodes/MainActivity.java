@@ -16,4 +16,8 @@ public class MainActivity extends AppCompatActivity {
     public void scanMobileVisionAPI(View view){
         startActivity(new Intent(this, MobileVision.class));
     }
+
+    public void scanZXing(View view){
+        startActivity(new Intent(this, ZXingActivity.class));
+    }
 }
