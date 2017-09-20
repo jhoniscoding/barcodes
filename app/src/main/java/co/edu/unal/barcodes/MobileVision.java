@@ -33,14 +33,7 @@ public class MobileVision extends AppCompatActivity {
         barcodeInfo = (TextView) findViewById(R.id.mobile_vision_result);
 
         barcodeDetector =
-                new BarcodeDetector.Builder(this)
-                        .setBarcodeFormats(
-                                Barcode.QR_CODE
-                                | Barcode.UPC_A
-                                | Barcode.UPC_E
-                                | Barcode.EAN_13
-                                | Barcode.EAN_8)
-                        .build();
+                new BarcodeDetector.Builder(this).build();
 
         cameraSource = new CameraSource
                 .Builder(this, barcodeDetector)

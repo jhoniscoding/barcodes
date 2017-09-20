@@ -17,7 +17,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, MobileVision.class));
     }
 
-    public void scanZXing(View view){
+    public void scanZXingLib(View view){
         startActivity(new Intent(this, ZXingActivity.class));
+    }
+
+    public void scanZBarLib(View view){
+        startActivity(new Intent(this, ZBarActivity.class));
     }
 }

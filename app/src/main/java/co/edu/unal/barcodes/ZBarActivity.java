@@ -6,18 +6,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-public class ZXingActivity extends AppCompatActivity{
+public class ZBarActivity extends AppCompatActivity{
 
     public static TextView barcodeInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_zxing);
-        barcodeInfo = (TextView) findViewById(R.id.zxing_result);
+        setContentView(R.layout.activity_zbar);
+        barcodeInfo = (TextView) findViewById(R.id.zbar_result);
     }
 
-    public void scanZXing(View view){
-        startActivity(new Intent(this, ZXing.class));
+    public void scanZBar(View view){
+        startActivity(new Intent(this, ZBar.class));
     }
 }

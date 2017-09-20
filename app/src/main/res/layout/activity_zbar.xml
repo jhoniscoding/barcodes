@@ -4,7 +4,7 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/zxing_result"
+        android:id="@+id/zbar_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -14,13 +14,13 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:id="@+id/zxingScanButton"
+        android:id="@+id/zbarScanButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/zxing_result"
+        android:layout_above="@+id/zbar_result"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="17dp"
-        android:text="Scan ZXing"
-        android:onClick="scanZXing"/>
+        android:text="Scan ZBar"
+        android:onClick="scanZBar"/>
 
 </RelativeLayout>

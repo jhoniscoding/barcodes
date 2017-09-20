@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="co.edu.unal.barcodes.MainActivity">
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/mobileViewButton"
@@ -12,22 +12,35 @@
         android:layout_height="wrap_content"
         android:onClick="scanMobileVisionAPI"
         android:text="Mobile View API"
-        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_marginLeft="123dp"
+        android:layout_marginTop="182dp" />
 
     <Button
         android:id="@+id/zxingButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:onClick="scanZXing"
+        android:onClick="scanZXingLib"
         android:text="ZXing"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobileViewButton" />
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/mobileViewButton"
+        app:layout_constraintLeft_toLeftOf="@+id/mobileViewButton"
+        app:layout_constraintRight_toRightOf="@+id/mobileViewButton"
+        android:layout_marginTop="1dp" />
 
+    <Button
+        android:id="@+id/zbarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="scanZBarLib"
+        android:text="ZBar"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/zxingButton"
+        app:layout_constraintLeft_toLeftOf="@+id/zxingButton"
+        app:layout_constraintRight_toRightOf="@+id/zxingButton"
+        android:layout_marginTop="-3dp"
+        app:layout_constraintHorizontal_bias="0.0" />
 </android.support.constraint.ConstraintLayout>
